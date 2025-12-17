@@ -1,0 +1,117 @@
+/* Page layout */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+html { height: 100vh; }
+body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; height: 100vh; background-color: #D1D5DB; }
+
+/* Form controls */
+input, button { padding: 12px; margin: 10px 0; width: 100%; box-sizing: border-box; font-size: 16px; }
+
+.score-list { margin-top: 20px; }
+
+/* Highlighted title box */
+.title-box {
+	background-color: #16a34a;
+	border: 1px solid #15803d;
+	padding: 20px 24px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.title-box h2 { margin: 0; font-size: 2rem; color: #fff; }
+
+/* Small responsive tweak */
+@media (max-width: 520px) {
+	body { margin: 20px; }
+}
+
+/* Two-column hero: quote (left) + image banner (right) */
+.hero {
+	display: flex;
+	gap: 16px;
+	align-items: stretch;
+	margin-bottom: 20px;
+}
+.quote-box {
+	background-color: #16a34a;
+	border: 1px solid #15803d;
+	padding: 16px;
+	border-radius: 8px;
+	flex: 1 1 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.quote-box blockquote { margin: 0; font-style: italic; color: #fff; font-family: 'Merriweather', Georgia, serif; font-weight: 300; font-size: 26px; line-height: 1.5; text-align: center; }
+.banner {
+	background-color: #16a34a;
+	border: 1px solid #15803d;
+	border-radius: 8px;
+	flex: 1 1 55%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.banner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 30% center;
+	display: block;
+	border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  .hero { flex-direction: column; }
+  .banner img { height: 220px; width: 100%; }
+}
+
+/* Main layout: three columns (quote, calculator, image) */
+.main-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(280px, 1fr) minmax(250px, 1fr);
+  gap: 24px;
+  flex: 1;
+  align-items: stretch;
+}
+
+.quote-box {
+  background-color: #16a34a;
+  border: 1px solid #15803d;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-box blockquote { margin: 0; font-style: italic; font-family: 'Merriweather', Georgia, serif; font-weight: 300; font-size: 26px; line-height: 1.5; text-align: center; color: #fff; }
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.banner {
+  background-color: #16a34a;
+  border: 1px solid #15803d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% center;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}

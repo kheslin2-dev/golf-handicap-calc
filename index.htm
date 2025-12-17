@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Golf Index Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="title-box">
+  <h2>Golf Handicap Index Calculator</h2>
+</div>
+
+<div class="main-layout">
+  <div class="quote-box">
+    <blockquote>
+      <p>"Golf is the only sport where you yell fore, shoot six, and write down five." - Paul Harvey</p>
+    </blockquote>
+  </div>
+
+  <div class="calculator">
+    <label>Score:</label>
+<input type="number" id="scoreInput" placeholder="Enter score">
+
+<label>Course Rating:</label>
+<input type="number" id="ratingInput" step="0.1" placeholder="Enter course rating">
+
+<label>Slope:</label>
+<input type="number" id="slopeInput" placeholder="Enter slope">
+
+<button id="addScoreBtn">Add Score</button>
+
+<h3>Your Scores</h3>
+<div id="scoreList" class="score-list"></div>
+
+<h3>Your Handicap Index</h3>
+    <p id="indexResult">No data yet.</p>
+  </div>
+
+  <div class="banner">
+    <!-- Replace the src with your image file name or path -->
+    <img src ="images/tiger chip.jpg" alt="Golf Image" class="hero-image">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
